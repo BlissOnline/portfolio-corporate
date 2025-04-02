@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic HTML Import</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="hero"></div>
+  <!-- <div id="about"></div> -->
+  <!-- <div id="services"></div> -->
+  <!-- <div id="contact"></div> -->
+
+  <script>
+    // Function to fetch and load content
+    async function loadContent(containerId, fileName) {
+      try {
+        const response = await fetch(fileName);
+        if (!response.ok) throw new Error(`Failed to fetch ${fileName}`);
+        const htmlContent = await response.text();
+        document.getElementById(containerId).innerHTML = htmlContent;
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+
+    // Load sections dynamically
+    loadContent("hero", "hero.html");
+    // loadContent("about", "about.html");
+    // loadContent("services", "services.html");
+    // loadContent("contact", "contact.html");
+  </script>
+</body>
+</html>
