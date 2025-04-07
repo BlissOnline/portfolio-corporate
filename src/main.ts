@@ -17,6 +17,8 @@ async function loadSection(containerId: string, fileName: string) {
 
 // Dynamically load sections
 loadSection('hero', 'hero.html');
+loadSection("portfolio", "portfolio.html")
+loadSection("about", "about.html");
 // loadSection('about', 'about.html');
 // loadSection('services', 'services.html');
-// loadSection('contact', 'contact.html');
+loadSection('contact', 'contact.html');
