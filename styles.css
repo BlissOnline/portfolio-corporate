@@ -329,6 +329,8 @@ nav a:hover {
     /* white-space: nowrap; */
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    /* transition: opacity 4s ease 5s, transform 4s ease 5s; */
+
     pointer-events: none; /* Prevent mouse interaction */
     width: 450px;
     /* margin: 0 50px; */
@@ -342,6 +344,7 @@ nav a:hover {
 .project-cards:hover .tooltip {
     opacity: 1; /* Makes the tooltip visible */
     transform: translateX(-50%) translateY(-5px); /* Slight movement for effect */
+    
 }
 
 /* about section ================================================*/
